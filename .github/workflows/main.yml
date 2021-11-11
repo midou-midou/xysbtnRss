@@ -17,8 +17,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Install Dependency & run index.js
-        run: npm install & node index.js
+      - name: Install Dependency 
+        run: npm install
+      - name: run index.js
+        run: node index.js
   sshDeploy:
     needs: buildandsubRSS
     runs-on: ubuntu-latest
