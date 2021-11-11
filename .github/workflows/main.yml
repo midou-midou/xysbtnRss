@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 14
       - name: Install Dependency & run index.js
-        run: npm ci & node index.js
+        run: npm install & node index.js
   sshDeploy:
     needs: buildandsubRSS
     runs-on: ubuntu-latest
