@@ -5,6 +5,7 @@ const fs = require('fs');
 
 rsshub.init();
 fs.mkdirSync(path.resolve(__dirname, './json'));
+
 var handlerXml = async (vcfg) => {
     const data = await rsshub.request(`/bilibili/user/dynamic/${vcfg.uid}`);
     fs.writeFileSync(path.resolve(__dirname, './json', `${vcfg.uid}.json`), JSON.stringify(data), (err) => {
