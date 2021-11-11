@@ -21,10 +21,6 @@ jobs:
         run: npm install
       - name: run index.js
         run: node index.js
-  sshDeploy:
-    needs: buildandsubRSS
-    runs-on: ubuntu-latest
-    steps:
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@main
         env:
@@ -35,3 +31,4 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
           EXCLUDE: "/node_modules/"
+      
