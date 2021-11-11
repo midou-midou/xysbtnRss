@@ -8,7 +8,7 @@ on:
     - cron: "0 */12 * * *"
 
 jobs:
-  build&subRSS:
+  buildandsubRSS:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
       - name: Install Dependency & run index.js
         run: npm ci & node index.js
   sshDeploy:
-    needs: build&subRSS
+    needs: buildandsubRSS
     runs-on: ubuntu-latest
     steps:
       - name: SSH Deploy
