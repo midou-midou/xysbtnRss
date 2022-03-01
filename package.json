@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "path": "^0.12.7",
-    "rsshub": "^1.0.0-master.53f6347"
+    "rsshub": "^1.0.0-master.990cf92"
   }
 }
