@@ -1,11 +1,11 @@
 name: xysbtn-rss2json
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "* * 1 * *"
+  # push:
+  #   branches:
+  #     - main
+  # schedule:
+  #   - cron: "* * 1 * *"
 
 jobs:
   buildandsubRSS:
